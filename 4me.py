@@ -1,4 +1,3 @@
-from tkinter import *
 from tkinter.filedialog import askopenfilename
 def imp():
     c=0
