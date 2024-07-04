@@ -44,6 +44,7 @@ while True:
                     s.append(match)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+            #v idk how to get rid of the list out of range error v
             if line == "remove":
                 if sm==1:
                     s.pop(0)
@@ -57,5 +58,6 @@ while True:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
             if line == "show stack":
                 print(s)
+            #^ idk how to get rid of the list out of range error ^
             if error==True:
                 break
