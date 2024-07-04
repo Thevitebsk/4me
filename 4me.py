@@ -46,7 +46,7 @@ while True:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
             if line == "remove":
                 if sm==1:
-                    s.pop(matches)
+                    s.pop(0)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
             if line == "get":
@@ -54,5 +54,7 @@ while True:
                     print(s[0])
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+            if line == "show stack":
+                print(s)
             if error==True:
                 break
