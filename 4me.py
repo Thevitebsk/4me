@@ -1,6 +1,7 @@
 #important stuff
 s=[]
 from tkinter.filedialog import askopenfilename
+import re
 #import file
 def imp():
     pa = askopenfilename(filetypes=[("4ME Files", "*.fme")])
