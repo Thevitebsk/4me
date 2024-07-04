@@ -9,3 +9,4 @@ i will continue working on this page later
 for now 4ME has 4 commands (5 if you actually count the put < module > to work-machine)
 
 ## out
+This command basicly outputs a string in the {curly brackets} and if there are any charecters {hi!}outside the curly brackets. they are ignored
