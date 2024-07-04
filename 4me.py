@@ -10,7 +10,7 @@ def imp():
                 lines = [line.rstrip() for line in file]
             return lines
         except FileNotFoundError:
-            print()
+            print("S?\nHOW DID YOU GET IN HERE?")
 #main code loop
 while True:
     error=False
