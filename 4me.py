@@ -21,3 +21,5 @@ while True:
                 print(line)
             if line == "put INPUT to work-machine":
                 inp = 1
+            if line == "end execution":
+                break
