@@ -19,6 +19,7 @@ while True:
     i = imp()
     ln=1
     sm=0
+    op=0
     if i is not None:
         ln+=1
         for line in i:
@@ -57,5 +58,13 @@ while True:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
             if line == "show stack":
                 print(s)
+            if line == "put OPERATOR to work-machine":
+                sm = 1
+            if line == "+":
+                if op==1:
+                    r=int(s[0])+int(s[1])
+                    s.append(r)
+                if op==0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
             if error==True:
                 break
