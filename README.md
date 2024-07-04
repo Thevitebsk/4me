@@ -6,6 +6,6 @@ i will continue working on this page later
 
 # Commands
 
-for now 4ME has 2 commands (4 if you actually count the put <module> to work-machine)
+for now 4ME has 4 commands (5 if you actually count the put <module> to work-machine)
 
 ## out
