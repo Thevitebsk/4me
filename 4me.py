@@ -1,4 +1,5 @@
 #important stuff
+s=[]
 from tkinter.filedialog import askopenfilename
 #import file
 def imp():
@@ -9,17 +10,19 @@ def imp():
                 lines = [line.rstrip() for line in file]
             return lines
         except FileNotFoundError:
-            print("Unknown file")
+            print()
 #main code loop
 while True:
     inp = 0
     i = imp()
     if i is not None:
         for line in i:
-            if "out" in line:
-                line = line.replace("out ", "")
-                print(line)
+            matches = re.findall(r'{(.*?)}', line)
+            for match in matches:
+                print(match)
             if line == "put INPUT to work-machine":
                 inp = 1
             if line == "end execution":
                 break
+            if line == "show stack":
+                print(s)
