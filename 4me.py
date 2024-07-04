@@ -52,6 +52,7 @@ while True:
             if line == "get":
                 if sm==1:
                     print(s[0])
+                    s.pop(0)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
             if line == "show stack":
