@@ -21,7 +21,6 @@ while True:
     ln = 1
     sm = 0
     op = 0
-    
     if i is not None:
         ln += 1
         for line in i:
@@ -110,3 +109,6 @@ while True:
                     error = True
             if error == True:
                 break
+            matches = re.findall(r'{(.*?)}', line)
+            for match in matches:
+                continue
