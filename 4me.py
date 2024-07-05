@@ -13,6 +13,7 @@ def imp():
 
 # main code loop
 while True:
+    c=" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]`abcdefghijklmnopqrstuvwxyz{|}~"
     error = False
     inp = 0
     inpu = ""
@@ -111,7 +112,6 @@ while True:
             if line == "store":
                 if sm ==1:
                     ss.append(s[0])
-                    print(ss)
                     s.pop(0)
                 if sm == 0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
@@ -137,3 +137,6 @@ while True:
                     s.append(r)
                     s.pop(0)
                     s.pop(0)
+            matches = re.findall(r'num{(.*?)}', line)
+            for match in matches:
+                print (c[int(match)], end=" ")
