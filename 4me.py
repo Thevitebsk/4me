@@ -29,7 +29,7 @@ while True:
                 print(match)
             if line == "put INPUT to work-machine":
                 inp = 1
-            if line == "in{ }":
+            if line == "in":
                 if inp == 1:
                     inpu = input("string:")
                     s.append(inpu)
