@@ -1,10 +1,8 @@
 #important stuff
-s=[]
-ss=[]
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
-    pa = askopenfilename(filetypes=[("4ME Files", "*.fme")])
+    pa = askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
     if pa:
         try:
             with open(pa, 'r') as file:
@@ -22,6 +20,8 @@ while True:
     ln = 1
     sm = 0
     op = 0
+    s=[]
+    ss=[]
     if i is not None:
         ln += 1
         for line in i:
