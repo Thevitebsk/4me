@@ -64,6 +64,8 @@ while True:
                 if op==1:
                     r=int(s[0])+int(s[1])
                     s.append(r)
+                    s.pop(0)
+                    s.pop(0)
                 if op==0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
             if error==True:
