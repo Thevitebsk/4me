@@ -38,7 +38,7 @@ while True:
                     print(f"S6732\nMODULE INPUT IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
             if line == "":
-                print(f"S1456\nCAN YOU. IDK. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}")
+                print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}")
                 error = True
             if line == "put STACK MANIPULATION to work-machine":
                 sm = 1
