@@ -128,3 +128,12 @@ while True:
             matches = re.findall(r'{(.*?)}', line)
             for match in matches:
                 continue
+            if line == "concatenate":
+                if sm == 0:
+                    print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
+                if sm ==1:
+                    r=s[0]+","+s[1]
+                    s.append(r)
+                    s.pop(0)
+                    s.pop(0)
