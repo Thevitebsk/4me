@@ -37,6 +37,7 @@ while True:
                     error=True
             if line == "":
                 print(f"S1456\nCAN YOU. IDK. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}")
+                error=True
             if line == "put STACK MANIPULATION to work-machine":
                 sm = 1
             matches = re.findall(r'add{(.*?)}', line)
@@ -45,21 +46,24 @@ while True:
                     s.append(match)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
             if line == "remove":
                 if sm==1:
                     s.pop(0)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
             if line == "get":
                 if sm==1:
                     print(s[0])
                     s.pop(0)
                 if sm==0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
             if line == "show stack":
                 print(s)
             if line == "put OPERATOR to work-machine":
-                sm = 1
+                op = 1
             if line == "+":
                 if op==1:
                     r=int(s[0])+int(s[1])
@@ -68,5 +72,33 @@ while True:
                     s.pop(0)
                 if op==0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
+            if line == "-":
+                if op==1:
+                    r=int(s[0])-int(s[1])
+                    s.append(r)
+                    s.pop(0)
+                    s.pop(0)
+                if op==0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
+            if line == "*":
+                if op==1:
+                    r=int(s[0])*int(s[1])
+                    s.append(r)
+                    s.pop(0)
+                    s.pop(0)
+                if op==0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
+            if line == "/":
+                if op==1:
+                    r=int(s[0])/int(s[1])
+                    s.append(r)
+                    s.pop(0)
+                    s.pop(0)
+                if op==0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error=True
             if error==True:
                 break
