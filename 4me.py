@@ -149,3 +149,11 @@ while True:
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
+            if line == "n-":
+                if op == 1:
+                    r=int(s[0])*-1
+                    s.append(r)
+                    s.pop(0)
+                if op == 0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
