@@ -31,10 +31,17 @@ while True:
                 print(match)
             if line == "put INPUT to work-machine":
                 inp = 1
-            if line == "in":
+            if line == "is":
                 if inp == 1:
                     inpu = input("string:")
                     s.append(inpu)
+                if inp == 0:
+                    print(f"S6732\nMODULE INPUT IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
+            if line == "ns":
+                if inp == 1:
+                    inpu = input("number:")
+                    s.append(int(inpu))
                 if inp == 0:
                     print(f"S6732\nMODULE INPUT IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
@@ -123,8 +130,6 @@ while True:
                 if sm == 0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
-            if error == True:
-                break
             matches = re.findall(r'{(.*?)}', line)
             for match in matches:
                 continue
@@ -165,3 +170,5 @@ while True:
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
+            if error == True:
+                break
