@@ -1,5 +1,6 @@
 #important stuff
 s=[]
+ss=[]
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
@@ -56,7 +57,7 @@ while True:
                     error = True
             if line == "get":
                 if sm == 1:
-                    print(s[0])
+                    print(s[0], end="")
                     s.pop(0)
                 if sm == 0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
@@ -104,6 +105,21 @@ while True:
             if line == "duplicate":
                 if sm == 1:
                     s.append(s[0])
+                if sm == 0:
+                    print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
+            if line == "store":
+                if sm ==1:
+                    ss.append(s[0])
+                    print(ss)
+                    s.pop(0)
+                if sm == 0:
+                    print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
+            if line == "unstore":
+                if sm ==1:
+                    s.append(ss[0])
+                    ss.pop(0)
                 if sm == 0:
                     print(f"S6732\nMODULE STACK MANIPULATION IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
