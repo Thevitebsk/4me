@@ -140,3 +140,12 @@ while True:
             matches = re.findall(r'num{(.*?)}', line)
             for match in matches:
                 print (c[int(match)], end=" ")
+            if line == "m/":
+                if op == 1:
+                    r = int(s[1]) % int(s[0])
+                    s.append(r)
+                    s.pop(0)
+                    s.pop(0)
+                if op == 0:
+                    print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
