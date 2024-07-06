@@ -23,6 +23,8 @@ while True:
     op = 0
     s=[]
     ss=[]
+    vm=0
+    v=0
     if i is not None:
         ln += 1
         for line in i:
@@ -172,3 +174,18 @@ while True:
                     error = True
             if error == True:
                 break
+            if line == "put VARIABLE to work-machine":
+                vm = 1
+            if line == "var":
+                if vm==1:
+                    v=s[0]
+                    s.pop(0)
+                if vm==0:
+                    print(f"S6732\nMODULE VARIABLE IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
+            if line == "vao":
+                if vm==1:
+                    print(v)
+                if vm==0:
+                    print(f"S6732\nMODULE VARIABLE IS NOT FOUND\nERROR AT LINE {ln}")
+                    error = True
