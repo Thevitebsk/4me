@@ -189,28 +189,28 @@ while True:
                     error = True
             if line == "v+":
                 if op==1:
-                    v =+ int(s[0])
+                    v = int(v) + int(s[0])
                     s.pop(0)
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
             if line == "v-":
                 if op==1:
-                    v =- int(s[0])
+                    v = int(v) - int(s[0])
                     s.pop(0)
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
             if line == "v*":
                 if op==1:
-                    v = v * int(s[0])
+                    v = int(v) * int(s[0])
                     s.pop(0)
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
                     error = True
             if line == "v/":
                 if op==1:
-                    v = v / int(s[0])
+                    v = int(v) / int(s[0])
                     s.pop(0)
                 if op == 0:
                     print(f"S6732\nMODULE OPERATOR IS NOT FOUND\nERROR AT LINE {ln}")
