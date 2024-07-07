@@ -28,6 +28,10 @@ while True:
             matches = re.findall(r'out{(.*?)}', line)
             for match in matches:
                 print(match)
+            matches = re.findall(r'in{(.*?)}', line)
+            for match in matches:
+                inpu = input(match)
+                s.append(inpu)
             if line == "is":
                 inpu = input("string:")
                 s.append(inpu)
