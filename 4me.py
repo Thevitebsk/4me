@@ -31,10 +31,10 @@ while True:
             if line == "is":
                 inpu = input("string:")
                 s.append(inpu)
-            if line == "ns":
+            elif line == "ns":
                 inpu = input("number:")
                 s.append(int(inpu))
-            if line == "":
+            elif line == "":
                 print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}")
                 error = True
             matches = re.findall(r'add{(.*?)}', line)
@@ -42,37 +42,37 @@ while True:
                 s.append(match)
             if line == "remove":
                 s.pop(0)
-            if line == "get":
+            elif line == "get":
                 print(s[0])
                 s.pop(0)
-            if line == "show stack":
+            elif line == "show stack":
                 print(s)
-            if line == "+":
+            elif line == "+":
                 r = int(s[0]) + int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "-":
+            elif line == "-":
                 r = int(s[0]) - int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "*":
+            elif line == "*":
                 r = int(s[0]) * int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "/":
+            elif line == "/":
                 r = int(s[0]) / int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "duplicate":
+            elif line == "duplicate":
                 s.append(s[0])
-            if line == "store":
+            elif line == "store":
                 ss.append(s[0])
                 s.pop(0)
-            if line == "unstore":
+            elif line == "unstore":
                 s.append(ss[0])
                 ss.pop(0)
             matches = re.findall(r'{(.*?)}', line)
@@ -83,34 +83,34 @@ while True:
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "m/":
+            elif line == "m/":
                 r = int(s[1]) % int(s[0])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            if line == "n-":
+            elif line == "n-":
                 r=int(s[0])*-1
                 s.append(r)
                 s.pop(0)
-            if line == "2*":
+            elif line == "2*":
                 r=int(s[0])*int(s[0])
                 s.append(r)
                 s.pop(0)
-            if line == "var":
+            elif line == "vs":
                 v=s[0]
                 s.pop(0)
-            if line == "vao":
+            elif line == "vo":
                 print(v)
-            if line == "v+":
+            elif line == "v+":
                 v = int(v) + int(s[0])
                 s.pop(0)
-            if line == "v-":
+            elif line == "v-":
                 v = int(v) - int(s[0])
                 s.pop(0)
-            if line == "v*":
+            elif line == "v*":
                 v = int(v) * int(s[0])
                 s.pop(0)
-            if line == "v/":
+            elif line == "v/":
                 v = int(v) / int(s[0])
                 s.pop(0)
             if error == True:
