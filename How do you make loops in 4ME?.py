@@ -1,4 +1,5 @@
 def func():
     print("hi")
-if True:
-    func()
+    if True:
+        func()
+func()
