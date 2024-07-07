@@ -28,17 +28,13 @@ while True:
             matches = re.findall(r'out{(.*?)}', line)
             for match in matches:
                 print(match)
-            matches = re.findall(r'in{(.*?)}', line)
-            for match in matches:
-                inpu = input(match)
-                s.append(inpu)
             if line == "is":
                 inpu = input("string:")
                 s.append(inpu)
-            elif line == "ns":
+            if line == "ns":
                 inpu = input("number:")
                 s.append(int(inpu))
-            elif line == "":
+            if line == "":
                 print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}")
                 error = True
             matches = re.findall(r'add{(.*?)}', line)
@@ -46,37 +42,37 @@ while True:
                 s.append(match)
             if line == "remove":
                 s.pop(0)
-            elif line == "get":
+            if line == "get":
                 print(s[0])
                 s.pop(0)
-            elif line == "show stack":
+            if line == "show stack":
                 print(s)
-            elif line == "+":
+            if line == "+":
                 r = int(s[0]) + int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "-":
+            if line == "-":
                 r = int(s[0]) - int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "*":
+            if line == "*":
                 r = int(s[0]) * int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "/":
+            if line == "/":
                 r = int(s[0]) / int(s[1])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "duplicate":
+            if line == "duplicate":
                 s.append(s[0])
-            elif line == "store":
+            if line == "store":
                 ss.append(s[0])
                 s.pop(0)
-            elif line == "unstore":
+            if line == "unstore":
                 s.append(ss[0])
                 ss.pop(0)
             matches = re.findall(r'{(.*?)}', line)
@@ -87,35 +83,56 @@ while True:
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "m/":
+            if line == "m/":
                 r = int(s[1]) % int(s[0])
                 s.append(r)
                 s.pop(0)
                 s.pop(0)
-            elif line == "n-":
+            if line == "n-":
                 r=int(s[0])*-1
                 s.append(r)
                 s.pop(0)
-            elif line == "2*":
+            if line == "2*":
                 r=int(s[0])*int(s[0])
                 s.append(r)
                 s.pop(0)
-            elif line == "vs":
+            if line == "vs":
                 v=s[0]
                 s.pop(0)
-            elif line == "vo":
+            if line == "vo":
                 print(v)
-            elif line == "v+":
+            if line == "v+":
                 v = int(v) + int(s[0])
                 s.pop(0)
-            elif line == "v-":
+            if line == "v-":
                 v = int(v) - int(s[0])
                 s.pop(0)
-            elif line == "v*":
+            if line == "v*":
                 v = int(v) * int(s[0])
                 s.pop(0)
-            elif line == "v/":
+            if line == "v/":
                 v = int(v) / int(s[0])
                 s.pop(0)
+            if line == "&":
+                if s[0]!=s[1]:
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(0)
+                if s[0]==s[1]:
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(1)
+            if line == "|":
+                if s[0]==s[1]:
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(0)
+                if s[0]!=s[1]:
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(1)
+            matches = re.findall(r'num{(.*?)}', line)
+            for match in matches:
+                print(c[int(match)])
             if error == True:
                 break
