@@ -1,4 +1,10 @@
 #important stuff
+print("@@@@@@@@@@@@@@@")
+print()
+print("     4MEV1     ")
+print()
+print("@@@@@@@@@@@@@@@")
+print("CAHNGE LOG:\nReadded the num command")
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
@@ -10,7 +16,6 @@ def imp():
             return lines
         except FileNotFoundError:
             print()
-
 # main code loop
 while True:
     c=" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]`abcdefghijklmnopqrstuvwxyz{|}~"
@@ -21,10 +26,10 @@ while True:
     s=[]
     ss=[]
     ts=[]
-    v=0
+    v=""
     if i is not None:
-        ln += 1
         for line in i:
+            ln += 1
             matches = re.findall(r'out{(.*?)}', line)
             for match in matches:
                 print(match)
@@ -100,7 +105,10 @@ while True:
                 v=s[0]
                 s.pop(0)
             if line == "vo":
-                print(v)
+                if v == "":
+                    print(f"S3452\nYOU HAVEN'T EVEN DEFINED THE VARIABLE YET\nERROR AT LINE {ln}")
+                else:
+                    print(v)
             if line == "v+":
                 v = int(v) + int(s[0])
                 s.pop(0)
@@ -113,26 +121,69 @@ while True:
             if line == "v/":
                 v = int(v) / int(s[0])
                 s.pop(0)
-            if line == "&":
-                if s[0]!=s[1]:
-                    s.pop(0)
-                    s.pop(0)
-                    s.append(0)
-                if s[0]==s[1]:
-                    s.pop(0)
-                    s.pop(0)
-                    s.append(1)
-            if line == "|":
-                if s[0]==s[1]:
-                    s.pop(0)
-                    s.pop(0)
-                    s.append(0)
-                if s[0]!=s[1]:
-                    s.pop(0)
-                    s.pop(0)
-                    s.append(1)
             matches = re.findall(r'num{(.*?)}', line)
             for match in matches:
-                print(c[int(match)])
+                print(c[int(match)], end='')
+            if line == "=":
+                if s[0] == s[1]:
+                    print(1)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(1)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(0)
+            if line == "v=":
+                if s[0] == v:
+                    print(1)
+                    s.pop(0)
+                    s.append(0)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.append(0)
+            if line == ">":
+                if s[0] > s[1]:
+                    print(1)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(1)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(0)
+            if line == "v>":
+                if s[0] >v:
+                    print(1)
+                    s.pop(0)
+                    s.append(0)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.append(0)
+            if line == "<":
+                if s[0] < s[1]:
+                    print(1)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(1)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.pop(0)
+                    s.append(0)
+            if line == "v<":
+                if s[0] < v:
+                    print(1)
+                    s.pop(0)
+                    s.append(0)
+                else:
+                    print(0)
+                    s.pop(0)
+                    s.append(0)
             if error == True:
+                break== True:
                 break
