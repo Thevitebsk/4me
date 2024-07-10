@@ -1,10 +1,7 @@
 #important stuff
 print("@@@@@@@@@@@@@@@")
-print()
 print("     4MEV1     ")
-print()
 print("@@@@@@@@@@@@@@@")
-print("CAHNGE LOG:\nReadded the num command")
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
