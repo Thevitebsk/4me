@@ -32,8 +32,6 @@ while True:
             ln += 1
             matches = re.findall(r'P:(.*?)', line)
             for match in matches:
-                if matches=="":
-                    print(f"S2637\n;)\nERROR AT LINE 1")
                 c=1
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
