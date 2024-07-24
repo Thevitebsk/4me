@@ -27,14 +27,13 @@ while True:
     ts=[]
     v=""
     c=0
-    pn=""
     if i is not None:
         for line in i:
             ln += 1
+            print(line)
             matches = re.findall(r'P:(.*?)', line)
             for match in matches:
                 c=1
-                pn=match
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
                 for match in matches:
@@ -117,7 +116,7 @@ while True:
                     print(f"length:{leng}")
                 if line == "E:":
                     break
-                matches = re.findall(r'IGNORE (.*?)', line)
+                matches = re.findall(r'# (.*?)', line)
                 for match in matches:
                     continue
             else:
