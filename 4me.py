@@ -30,9 +30,10 @@ while True:
     if i is not None:
         for line in i:
             ln += 1
-            print(line)
             matches = re.findall(r'P:(.*?)', line)
             for match in matches:
+                if matches=="":
+                    print(f"S2637\n;)\nERROR AT LINE 1")
                 c=1
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
@@ -120,7 +121,7 @@ while True:
                 for match in matches:
                     continue
             else:
-                print("S1245\nP: IS MISSING")
+                print("S1245\nP: IS MISSING\nERROR AT LINE 1")
                 error=True
             if error == True:
                 break
