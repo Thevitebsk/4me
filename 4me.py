@@ -17,7 +17,7 @@ def imp():
             print()
 # main code loop
 while True:
-    c=" !#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]`abcdefghijklmnopqrstuvwxyz{|}~"
+    c="0123456789 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]`|~"
     error = False
     inpu = ""
     i = imp()
@@ -84,40 +84,16 @@ while True:
                 if line == "unstore":
                     s.append(ss[0])
                     ss.pop(0)
-                if line == "concatenate":
-                    r=s[0]+","+s[1]
-                    s.append(r)
-                    s.pop(0)
-                    s.pop(0)
-                if line == "vs":
-                    v=s[0]
-                    s.pop(0)
-                if line == "vo":
-                    if v == "":
-                        print(f"S3452\nYOU HAVEN'T EVEN DEFINED THE VARIABLE YET\nERROR AT LINE {ln}")
-                    else:
-                        print(v)
-                if line == "v+":
-                    v = int(v) + int(s[0])
-                    s.pop(0)
-                if line == "v-":
-                    v = int(v) - int(s[0])
-                    s.pop(0)
-                if line == "v*":
-                    v = int(v) * int(s[0])
-                    s.pop(0)
-                if line == "v/":
-                    v = int(v) / int(s[0])
-                    s.pop(0)
-                if line == "length":
-                    leng=len(s[0])
-                    s.pop(0)
-                    print(f"length:{leng}")
                 if line == "E:":
                     break
                 matches = re.findall(r'# (.*?)', line)
                 for match in matches:
                     continue
+                #v uhh v
+                matches = re.findall(r'char{(.*?)}', line)
+                for match in matches:
+                    print(end=c[int(match)])
+                #^ uhh ^
             else:
                 print("S1245\nP: IS MISSING\nERROR AT LINE 1")
                 error=True
