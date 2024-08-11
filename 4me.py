@@ -89,11 +89,11 @@ while True:
                 matches = re.findall(r'# (.*?)', line)
                 for match in matches:
                     continue
-                #v uhh v
-                matches = re.findall(r'char{(.*?)}', line)
+                matches = re.findall(r'end{(.*?)}', line)
                 for match in matches:
-                    print(end=c[int(match)])
-                #^ uhh ^
+                    print("",end=match)
+                if line == "pause":
+                    input("\nPress any key to continue...")
             else:
                 print("S1245\nP: IS MISSING\nERROR AT LINE 1")
                 error=True
