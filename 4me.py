@@ -10,19 +10,10 @@ def imp():
                 lines = [line.rstrip() for line in file]
             return lines
         except FileNotFoundError:
-            print()
+            print("undefined file")
 # main code loop
 while True:
-    c="0123456789 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\]`|~"
-    error = False
-    inpu = ""
-    i = imp()
-    ln = 1
-    s=[]
-    ss=[]
-    ts=[]
-    v=""
-    c=0
+    error = False;inpu = "";i = imp();ln = 1;s=[];ss=[];ts=[];v="";c=0
     if i is not None:
         for line in i:
             ln += 1
