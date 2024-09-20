@@ -1,9 +1,5 @@
 #important stuff
-print()
-print("!@@@!")
-print(" 4ME ")
-print("!@@@!")
-print()
+print("4me. The esolang created by user ractangle")
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
