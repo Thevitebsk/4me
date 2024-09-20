@@ -36,7 +36,7 @@ while True:
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
                 for match in matches:
-                    print(match)
+                    print(end=match)
                 if line == "is":
                     inpu = input("string:")
                     s.append(inpu)
@@ -89,11 +89,6 @@ while True:
                 matches = re.findall(r'# (.*?)', line)
                 for match in matches:
                     continue
-                matches = re.findall(r'end{(.*?)}', line)
-                for match in matches:
-                    print("",end=match)
-                if line == "pause":
-                    input("\nPress any key to continue...")
             else:
                 print("S1245\nP: IS MISSING\nERROR AT LINE 1")
                 error=True
