@@ -2,4 +2,4 @@
 ----
 A belarusian programing language made by Gaham
 
-this language MAY be rewriten
+this language MAY be rewriten sometime
