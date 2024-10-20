@@ -6,5 +6,5 @@ l.append("\n");l.reverse();a=str(l[1])+str(l[0]);l.pop(0);l.pop(0);l.reverse();l
 print("bytes",len(j),"lines",len(l))
 while l!=[]:
     s=l[0].split("{")
-    if s[0]=="echo":print(s[1].replace("}\n","").replace("\"",""))
+    if s[0]=="echo":print(s[1].replace("}\n",""))
     l.pop(0)
