@@ -1,5 +1,5 @@
 #important stuff
-print("4me. The esolang created by user ractangle")
+print("4me. The language created by Gaham")
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
