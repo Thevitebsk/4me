@@ -1,1 +1,1 @@
-print("impossible")
+print("impossible, for now")
