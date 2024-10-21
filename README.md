@@ -3,3 +3,5 @@
 A belarusian programing language made by Gaham
 
 this language is being rewriten right now
+
+also just to let you know. This language was NOT made in Roft
