@@ -18,4 +18,6 @@ while l!=[]:
         if s[0] in var["names"]:
             val=list(var["names"]).index(s[0])
         print(var["values"][val]) 
+    if s[0]=="":
+        while len(s)>0:s.pop(0)
     l.pop(0)
