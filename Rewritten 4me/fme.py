@@ -14,8 +14,6 @@ while l!=[]:
         var["values"].append(f[1].replace("}\n",""))
         var["names"].append(f[0])
     if s[0]=="echo.var":
-        s[1]=s[1].replace("}\n","")
-        print(s)
         s.pop(0)
         if s[0] in var["names"]:
             val=list(var["names"]).index(s[0])
