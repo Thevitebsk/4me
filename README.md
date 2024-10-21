@@ -17,4 +17,4 @@ To run a 4ME program in a offline python interpreter (like using a python extens
 * Oh cool you completed the Running a 4ME program tutorial. You can repeat from 2nd (or 3rd) step of this tutorial
 
 # "How can i contribute?"
-by either submitting a pull request, or making an issue. I will hopefully answer your question if i have time
+by submitting an issue that is a bug request or something else. I will hopefully answer your question if i have time
