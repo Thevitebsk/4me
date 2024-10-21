@@ -4,7 +4,7 @@ A belarusian programing language made by Gaham
 
 this language is being rewriten right now
 
-also just to let you know. This language was NOT made in Roff nor it uses it in it's examples
+also just to let you know. This language was NOT made in Roff nor it's used in R4ME's examples
 
 # Tour
 a lil tour about 4ME
