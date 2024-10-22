@@ -15,11 +15,16 @@ while l!=[]:
     if s[0]=="var":
         s.pop(0)
         f=s[0].split("=")
-        var["values"].append(f[1].replace("}\n",""));var["names"].append(f[0])
+        if f[1]=="user}\n":
+            var["values"].append(input())
+        else:
+            var["values"].append(f[1].replace("}\n",""))
+        var["names"].append(f[0])
     if s[0]=="echo.var":
         s.pop(0)
         if s[0] in var["names"]:val=list(var["names"]).index(s[0])
         print(var["values"][val]) 
     if s[0]=="":
         while len(s)>0:s.pop(0)
+    if s[0]=="user":input();s.pop(0);s.pop()
     l.pop(0)
