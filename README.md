@@ -19,7 +19,7 @@ To run a 4ME program in a offline python interpreter (like using a python extens
 The steps are almost the same:
 * Add the "s" in the argument dictionary
 * Make a .4 file
-* Input your .4 file
+* Input your .4 file name
 * Oh hey you did it. now do it again from step 2 (or 3)
 # "How can help this language?"
 by submitting an issue that is a bug fix request or something else. I will hopefully answer your question if i have time
