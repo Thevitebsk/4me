@@ -16,5 +16,5 @@ To run a 4ME program in a offline python interpreter (like using a python extens
 * Find your file and submit it to your interpreter (unless if you're using R4ME, make sure to write the name for your `.4` file in the file name input section and hopefully your `.4` file is inside the interpreters path)
 * Oh cool you completed the Running a 4ME program tutorial. You can repeat from 2nd (or 3rd) step of this tutorial
 
-# "How can i contribute?"
-by submitting an issue that is a bug request or something else. I will hopefully answer your question if i have time
+# "How can help this language?"
+by submitting an issue that is a bug fix request or something else. I will hopefully answer your question if i have time
