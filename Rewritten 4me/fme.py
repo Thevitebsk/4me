@@ -1,7 +1,7 @@
 import os
 print("{R4ME}")
 var={"values":[],"names":[]};a={"args":[]}
-f=input("Input a filename that is inside the directory:");p=0;s=[];val=None;print("\nOutput:")
+f=input("Input a filename that is inside the directory:");p=0;s=[];val=0;print("\nOutput:")
 dir=os.path.realpath(__file__);dir2=os.path.dirname(dir)
 if "s" in a["args"]:
     o=open(f"{f}.4")
@@ -15,12 +15,10 @@ while l!=[]:
     if s[0]=="var":
         s.pop(0)
         f=s[0].split("=")
-        var["values"].append(f[1].replace("}\n",""))
-        var["names"].append(f[0])
+        var["values"].append(f[1].replace("}\n",""));var["names"].append(f[0])
     if s[0]=="echo.var":
         s.pop(0)
-        if s[0] in var["names"]:
-            val=list(var["names"]).index(s[0])
+        if s[0] in var["names"]:val=list(var["names"]).index(s[0])
         print(var["values"][val]) 
     if s[0]=="":
         while len(s)>0:s.pop(0)
