@@ -1,7 +1,7 @@
 import os
 print("{R4ME}")
 var={"values":[],"names":[]};a={"args":[]}
-f=input("Input a filename that is inside the directory:");p=0;s=[];val=0;print("\nOutput:")
+f=input("Input a filename inside the interpriters directory:");p=0;s=[];val=0;print("\nOutput:")
 dir=os.path.realpath(__file__);dir2=os.path.dirname(dir)
 if "s" in a["args"]:
     o=open(f"{f}.4")
