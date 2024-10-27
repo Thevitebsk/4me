@@ -17,8 +17,7 @@ while True:
     if i != None:
         for line in i:
             ln += 1
-            matches = re.findall(r'P:(.*?)', line)
-            for match in matches:
+            if line=="P;":
                 c=1
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
@@ -71,11 +70,6 @@ while True:
                 if line == "unstore":
                     s.append(ss[0])
                     ss.pop(0)
-                if line == "E:":
-                    break
-                matches = re.findall(r'# (.*?)', line)
-                for match in matches:
-                    continue
             else:
                 print("S1245\nP: IS MISSING\nERROR AT LINE 1")
                 error=True
