@@ -71,8 +71,6 @@ while True:
                 if line == "unstore":
                     s.append(ss[0])
                     ss.pop(0)
-                if line == "E:":
-                    break
                 matches = re.findall(r'# (.*?)', line)
                 for match in matches:
                     continue
