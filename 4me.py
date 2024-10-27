@@ -23,7 +23,7 @@ while True:
             if c==1:
                 matches = re.findall(r'out{(.*?)}', line)
                 for match in matches:
-                    print(end=match)
+                    print(match)
                 if line == "is":
                     inpu = input("string:")
                     s.append(inpu)
