@@ -14,7 +14,7 @@ def imp():
 # main code loop
 while True:
     error = False;inpu = "";i = imp();ln = 1;s=[];ss=[];ts=[];v="";c=0
-    if i is not None:
+    if i != None:
         for line in i:
             ln += 1
             matches = re.findall(r'P:(.*?)', line)
