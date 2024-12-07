@@ -12,7 +12,7 @@ l.append("\n");l.reverse();a=str(l[1])+str(l[0]);l.pop(0);l.pop(0);l.reverse();l
 while l!=[]:
     s=l[0].split("{")
     if s[0]=="echo":print(s[1].replace("}\n",""))
-    if s[0]=="var":
+    elif s[0]=="var":
         s.pop(0)
         f=s[0].split("=")
         if f[1]=="user}\n":
@@ -20,11 +20,11 @@ while l!=[]:
         else:
             var["values"].append(f[1].replace("}\n",""))
         var["names"].append(f[0])
-    if s[0]=="echo.var":
+    elif s[0]=="echo.var":
         s.pop(0)
         if s[0] in var["names"]:val=list(var["names"]).index(s[0])
         print(var["values"][val]) 
-    if s[0]=="":
-        while len(s)>0:s.pop(0)
-    if s[0]=="user":input();s.pop(0);s.pop()
+    elif l[0][0]=="#":...
+    elif s[0]=="user":input();s.pop(0);s.pop()
+    else:print("Your line contians an undefined command",l)
     l.pop(0)
