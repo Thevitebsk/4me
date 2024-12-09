@@ -6,8 +6,7 @@ def imp():
     pa = askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
     if pa:
         try:
-            with open(pa, 'r') as file:
-                lines = [line.rstrip() for line in file]
+            with open(pa, 'r') as file:lines = [line.rstrip() for line in file]
             return lines
         except FileNotFoundError:
             print("undefined file")
