@@ -3,12 +3,10 @@ print("4me. The language created by Gaham")
 from tkinter.filedialog import askopenfilename
 import re
 def imp():
-    pa = askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
+    pa=askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
     if pa:
-        try:
-            with open(pa, 'r') as file: lines = [line.rstrip() for line in file]
-            return lines
-        except FileNotFoundError: print("undefined file")
+        with open(pa, 'r') as file:lines=[line.rstrip() for line in file]
+            return lines
 # main code loop
 while True:
     error = False;inpu = "";i = imp();ln = 1;s=[];ss=[];ts=[];v="";c=0
@@ -53,5 +51,6 @@ while True:
                 if line == "unstore":
                     s.append(ss[0])
                     ss.pop(0)
+                if line == "E;": break
             else: print("S1245\nP: IS MISSING\nERROR AT LINE 1");error=True
             if error == True:break
