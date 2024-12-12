@@ -28,9 +28,9 @@ while True:
                 if line=="-":s.append(int(s.pop(0))-int(s.pop(0)))
                 if line=="*":s.append(int(s.pop(0))*int(s.pop(0)))
                 if line=="/":s.append(int(s.pop(0))//int(s.pop(0)))
-                if line == "duplicate": s.append(s[0])
-                if line == "store": ss.append(s.pop(0))
-                if line == "unstore": s.append(ss.pop(0))
-                if line == "E;": break
+                if line=="duplicate": s.append(s[0])
+                if line=="store": ss.append(s.pop(0))
+                if line=="unstore": s.append(ss.pop(0))
+                if line=="E;": break
             else: print("S1245\nP: IS MISSING\nERROR AT LINE 1");error=True
-            if error == True: break
+            if error==True: break
