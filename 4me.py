@@ -1,11 +1,10 @@
 #important stuff
 print("4me. The language created by Gaham")
-from tkinter.filedialog import askopenfilename
-import re
+from tkinter.filedialog import askopenfilename;import re
 def imp():
     pa=askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
     if pa:
-        with open(pa, 'r') as file:lines=[line.rstrip() for line in file]
+        with open(pa,'r') as file:lines=[line.rstrip() for line in file]
         return lines
 
 # main code loop
@@ -16,35 +15,19 @@ while True:
             ln+=1
             if line=="P;": c=1
             if c==1:
-                matches = re.findall(r'out{(.*?)}', line)
+                matches=re.findall(r'out{(.*?)}', line)
                 for match in matches: print(match)
-                if line == "is": s.append(input("string:"))
-                if line == "ns": s.append(int(input("number:")))
-                if line == "": print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}");error = True
-                matches = re.findall(r'add{(.*?)}',line)
+                if line=="is": s.append(input("string:"))
+                if line=="ns": s.append(int(input("number:")))
+                if line=="": print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}");error = True
+                matches=re.findall(r'add{(.*?)}',line)
                 for match in matches: s.append(match)
-                if line == "remove": s.pop(0)
-                if line == "get": print(s.pop(0))
-                if line == "+":
-                    r = int(s[0]) + int(s[1])
-                    s.append(r)
-                    s.pop(0)
-                    s.pop(0)
-                if line == "-":
-                    r = int(s[0]) - int(s[1])
-                    s.append(r)
-                    s.pop(0)
-                    s.pop(0)
-                if line == "*":
-                    r = int(s[0]) * int(s[1])
-                    s.append(r)
-                    s.pop(0)
-                    s.pop(0)
-                if line == "/":
-                    r = int(s[0]) / int(s[1])
-                    s.append(r)
-                    s.pop(0)
-                    s.pop(0)
+                if line=="remove": s.pop(0)
+                if line=="get": print(s.pop(0))
+                if line=="+":s.append(int(s.pop(0))+int(s.pop(0)))
+                if line=="-":s.append(int(s.pop(0))-int(s.pop(0)))
+                if line=="*":s.append(int(s.pop(0))*int(s.pop(0)))
+                if line=="/":s.append(int(s.pop(0))//int(s.pop(0)))
                 if line == "duplicate": s.append(s[0])
                 if line == "store": ss.append(s.pop(0))
                 if line == "unstore": s.append(ss.pop(0))
