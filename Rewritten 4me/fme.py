@@ -12,8 +12,8 @@ while l!=[]:
     if s[0]=="echo":print(s[1].replace("}\n",""))
     elif s[0]=="var":
         s.pop(0);f=s[0].split("=")
-        if f[1]=="user}\n":var["values"].append(input())
-        else:var["values"].append(f[1].replace("\n",""))
+        if f[1]=="user}\n":var[f[0]]=input()
+        else:var[f[0]]=f[1]
         var["names"].append(f[0])
     elif s[0]=="echo.var":
         s.pop(0)
