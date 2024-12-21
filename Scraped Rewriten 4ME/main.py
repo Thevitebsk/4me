@@ -1,8 +1,7 @@
 #TODO list:
 #Print command (Current)
-i=input("File path:");f=open(i);f=f.readlines()
-print("4ME",f)
-while len(f)>0:
+i=input("File path:");f=open(i);f=f.readlines();print("4ME")
+while f:
     c=f[0].split()
     print(c)
     if c[0]=="[":...
