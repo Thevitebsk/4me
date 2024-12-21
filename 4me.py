@@ -1,5 +1,5 @@
 #important stuff
-print("4me. The language created by Gaham")
+print("4ME!")
 from tkinter.filedialog import askopenfilename;import re
 def imp():
     pa=askopenfilename(filetypes=[("Work-Machine Files", "*.wm")])
