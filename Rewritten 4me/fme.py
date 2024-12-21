@@ -1,7 +1,8 @@
 import os;print("{R4ME}")
 var={};outqm=0;f=input("Input a filename inside the interpriters folder:")
-p=0;stk=[];val=0;dir=os.path.realpath(__file__);dir2=os.path.dirname(dir)
-a=["d"]
+p=0;stk=[];val=0
+dir=os.path.realpath(__file__);dir2=os.path.dirname(dir)
+a=["s"]
 print("\nOutput:")
 if "s"in a:o=open(f"{f}.4")
 else:o=open(f"{dir2}\\{f}.4")
@@ -18,7 +19,6 @@ while l:
         s.pop(0);outqm=1
         if s[0].replace("}\n","") in var:print(var[s[0].replace("}\n","")])
     elif l[0][0]=="#":...
-    elif s[0]=="user":input();s.pop(0);s.pop()
     else:print("Your line contians an undefined command",l)
     l.pop(0)
 if outqm==0:print("No output has been found")
