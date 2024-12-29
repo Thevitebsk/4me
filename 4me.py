@@ -9,7 +9,7 @@ def imp():
 
 # main code loop
 while True:
-    error=c=0; inpu=""; i=imp(); ln=1; s=[]; ss=[]; ts=[]; v=""
+    error=c=0; i=imp(); ln=1; s=[]; ss=[]; ts=[]
     if i != None:
         for line in i:
             ln+=1
