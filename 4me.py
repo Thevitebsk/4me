@@ -9,7 +9,7 @@ def imp():
 
 # main code loop
 while True:
-    error=False; inpu=""; i=imp(); ln=1; s=[]; ss=[]; ts=[]; v=""; c=0
+    error=c=0; inpu=""; i=imp(); ln=1; s=[]; ss=[]; ts=[]; v=""
     if i != None:
         for line in i:
             ln+=1
@@ -19,7 +19,7 @@ while True:
                 for match in matches: print(match)
                 if line=="is": s.append(input("string:"))
                 if line=="ns": s.append(int(input("number:")))
-                if line=="": print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}");error = True
+                if line=="": print(f"S1456\nCAN YOU. I DON'T KNOW. USE COMMANDS IN THE LINE\nERROR AT LINE {ln}");error=1
                 matches=re.findall(r'add{(.*?)}',line)
                 for match in matches: s.append(match)
                 if line=="remove": s.pop(0)
@@ -32,5 +32,5 @@ while True:
                 if line=="store": ss.append(s.pop(0))
                 if line=="unstore": s.append(ss.pop(0))
                 if line=="E;": break
-            else: print("S1245\nP: IS MISSING\nERROR AT LINE 1");error=True
-            if error==True: break
+            else: print("S1245\nP: IS MISSING\nERROR AT LINE 1");error=1
+            if error==1: break
