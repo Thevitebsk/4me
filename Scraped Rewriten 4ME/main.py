@@ -1,7 +1,7 @@
 #TODO list:
 #Print command (Current)
-i=input("File path:");f=open(i);f=f.readlines()
 print("4ME")
+i=input("File path:");f=open(i);f=f.readlines()
 while f:
     c=f[0].split()
     print(c)
