@@ -22,4 +22,4 @@ while l:
     else:print("Your line contians an undefined command",l)
     l.pop(0)
 if outqm==0:print("No output has been found")
-if"d"in a:print(f,var)
+if"d"in a:print(var,outqm)
